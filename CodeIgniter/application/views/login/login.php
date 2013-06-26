@@ -1,4 +1,4 @@
-login
+Home login
 <form action="<?php echo site_url("Home/login/submit");?>" method="post"  class="well form-horizontal">
     <table>
     <tr><td>Email</td><td><input type="email" name="email"   required colspan="3"/></td></tr>

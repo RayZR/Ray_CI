@@ -33,12 +33,13 @@ class home extends CI_Controller {
         $this->load->model('user_model');
         $result=$this->user_model->login($email,$password);
         if($result==true){
+            $this->session->set_userdata('loggedIn',true);
             $this->session->set_userdata('userId',$result->id);
             $this->session->set_userdata('role',$result->role);
             redirect(site_url('admin/dashboard'));
-        }else{
+         }else{
             redirect(site_url('Home/login'));
-        }
+          }
         }
     }
 

@@ -55,10 +55,22 @@ class user_model extends CI_Model{
         return $result;
 
     }
-
-    public function display_customers(){
+   // Display Customer page
+    //pagination part occurs in the controller
+    public function display_customers($limit,$start){
+        $this->db->limit($limit,$start);
         $query=$this->db->get('myTable');
-        return $query->result();
+        if($query->num_rows()>0){
+            foreach($query->result() as $row){
+                $data[]=$row;
+            }
+            return $data;
+        }
+        return false;
+    }
+
+    public function count_customer_records(){
+        return $this->db->count_all("myTable");
     }
 
 }

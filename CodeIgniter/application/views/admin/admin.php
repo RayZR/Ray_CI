@@ -1,27 +1,3 @@
-<div class="navbar">
-    <div class="navbar-inner">
-        <a class="brand" href="#">Ray</a>
-        <ul class="nav">
-            <li class="dropdown">
-                <a href="#" class="dropdown-toggle " data-toggle="dropdown">
-                    <i class="icon-user"></i> Home
-                    <b class="caret"></b>
-                </a>
-                <ul class="dropdown-menu">
-                    <li><a href="<?php echo base_url();?>admin">User Administration</a></li>
-                    <li><a href="<?php echo base_url();?>Home/login">Login</a></li>
-                </ul>
-            </li>
-            <form class="navbar-form pull-left">
-                <input type="text" class="span2">
-                <button type="submit" class="btn">Submit</button>
-            </form>
-            <li><a href="<?php echo base_url();?>admin/display_customers">Display Customers</a></li>
-            <li><a href="<?php echo base_url();?>admin/logout">Logout</a></li>
-        </ul>
-
-    </div>
-</div>
 <form action="<?php echo site_url("admin/create_user");?>" class="well form-inline" method="post">
     Email:<input type="email" name="email" placeholder="email" required />
 
